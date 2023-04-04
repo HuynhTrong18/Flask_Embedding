@@ -16,7 +16,8 @@ def index_get():
 @app.post("/api-backend/chats")
 def predict():
     chats = request.get_json().get("chats")
-    response = get_response([chats[-2]])    # response = get_response(chats[ : -1])
+#     response = get_response([chats[-2]])
+    response = get_response(chats[ : -1])
     message = {"answer": response}
     return jsonify(message)
 if __name__ == "__main__":
