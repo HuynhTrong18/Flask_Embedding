@@ -126,6 +126,9 @@ function replaceURLs(message) {
       if (!hyperlink.match('^https?:\/\/')) {
         hyperlink = 'http://' + hyperlink;
       }
+      if(hyperlink.charAt(hyperlink.length-1) == "."){
+        hyperlink = hyperlink.substring(0,hyperlink.length-1);
+      }
       return '<a href="' + hyperlink + '" target="_blank" rel="noopener noreferrer">'+ hyperlink +'</a>'
     });
   }
