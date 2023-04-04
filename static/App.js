@@ -33,6 +33,7 @@ class Chatbox {
             if (this.chats.length == 0) {
                 let hi = { role: "assistant", content: 'Xin chào, tôi là nhân viên hỗ trợ bán hàng của Gear VN. Bạn có thể cho tôi biết bạn đang quan tâm đến sản phẩm nào của chúng tôi không ạ?' };
                 this.chats.push(hi);
+
                 this.updateChatText(chatbox)
             }
         } else {
@@ -59,13 +60,13 @@ class Chatbox {
             this.updateChatText(chatbox)
             return;
         }
-
+        
         msg = { role: "assistant", content: "..." }
         this.chats.push(msg);
 
         this.updateChatText(chatbox)
         
-        var hosting = "https://ht-chatbot.azurewebsites.net"
+        var hosting = window.location.protocol + "//" + window.location.host;//"https://ht-chatbot.azurewebsites.net"
         fetch(hosting + '/api-backend/chats', {
             method: 'POST',
             body: JSON.stringify({ chats: this.chats}),

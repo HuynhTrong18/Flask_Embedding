@@ -31,8 +31,6 @@ body {
   display: flex;
   flex-direction: column;
   background: #eee;
-  width: 300px;
-  height: 350px;
   z-index: -123456;
   opacity: 0;
   transition: all .5s ease-in-out;
@@ -40,7 +38,7 @@ body {
 
 /* CONTENT ISOPEN */
 .chatbox--active {
-  transform: translateY(-40px);
+  transform: translateY(-10px);
   z-index: 123456;
   opacity: 1;
 
@@ -70,6 +68,7 @@ body {
 
 /* MESSAGES */
 .chatbox__messages {
+  height: 100%;
   margin-top: auto;
   display: flex;
   overflow-y: scroll;
@@ -99,8 +98,8 @@ body {
 
 .chatbox__support {
   background: #f9f9f9;
-  height: 450px;
-  width: 350px;
+  height: 500px;
+  width: 400px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -112,7 +111,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   padding: 15px 20px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -685,9 +684,9 @@ h6,
 /*typing*/
 .typing {
   background: #E0E0E0;
-  padding: 8px;
-  width: 50px;
-  height: 35px;
+  padding: auto;
+  width: 60px;
+  height: 30px;
   border-radius: 20px 20px 20px 0;
   position: relative;
   margin-right: auto;
@@ -700,8 +699,8 @@ h6,
 .typing span {
   content: '';
   display: block;
-  height: 7px;
-  width: 7px;
+  height: 6px;
+  width: 6px;
   border-radius: 4px;
   background-color: white;
   margin: auto;
@@ -713,7 +712,7 @@ h6,
 }
 
 .typing span:nth-child(2) {
-  animation-delay: 0.25s;
+  animation-delay: 0.2s;
 }
 .typing span:last-child {
   animation-delay: 0.5s;
@@ -725,19 +724,23 @@ h6,
     margin-bottom: 0px;
   }
   
-  25% {
-    margin-bottom: 4.5px;
+  20% {
+    margin-bottom: 2px;
   }
   
-  50% {
+  40% {
+    margin-bottom: 4px;
+  }
+  
+  60% {
+    margin-bottom: 6px;
+  }
+
+  80% {
     margin-bottom: 8px;
   }
   
-  75% {
-    margin-bottom: 11.5px;
-  }
-  
   100% {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 }

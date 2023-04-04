@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
+# Debug and test
+.vscode
+testpy.ipynb
 
 # C extensions
 *.so
