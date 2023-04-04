@@ -65,7 +65,7 @@ class Chatbox {
 
         this.updateChatText(chatbox)
         
-        var hosting = "https://ht-chatbot-openai.azurewebsites.net"
+        var hosting = "https://ht-chatbot.azurewebsites.net"
         fetch(hosting + '/api-backend/chats', {
             method: 'POST',
             body: JSON.stringify({ chats: this.chats}),
