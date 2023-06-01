@@ -57,7 +57,7 @@ class Chatbox {
         
         let say_hi =  ["hi","xin chào","hello","chào","hi!","xin chào!","hello!","chào!"]
         if (say_hi.includes(question.toLowerCase())) {
-            let hi = { role: "assistant", content: 'Xin chào, tôi là nhân viên hỗ trợ bán hàng của Gear VN. Bạn có thể cho tôi biết bạn đang quan tâm đến sản phẩm nào của chúng tôi không ạ?' };
+            let hi = { role: "assistant", content: 'Xin chào, tôi là chuyên viên hỗ trợ giải đáp thắc mắc và tư vấn quỹ đầu tư của Vinacapital. Bạn có thể cho tôi biết bạn đang thắc mắc hay quan tâm đến vấn đề gì không ạ?' };
             this.chats.push(hi);
             this.updateChatText(chatbox)
             return;

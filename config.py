@@ -1,7 +1,8 @@
 DOMAIN = "https://gearvn.com/"
 DOMAIN_FULL = DOMAIN+"en/latest/"
 
-EMBED_MODEL = "ht-model-embedding-ada-002"
+# EMBED_MODEL = "ht-model-embedding-ada-002"
+EMBED_MODEL = "ht-embedding-ada-v2"
 CHAT_MODEL = "ht-chat-gpt-35-turbo"
 OPENAI_API_VERSION_CHAT = "2023-03-15-preview"
 
