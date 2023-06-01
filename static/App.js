@@ -31,7 +31,9 @@ class Chatbox {
         if(this.state) {
             chatbox.classList.add('chatbox--active')
             if (this.chats.length == 0) {
-                let hi = { role: "assistant", content: 'Xin chào, tôi là nhân viên hỗ trợ bán hàng của Gear VN. Bạn có thể cho tôi biết bạn đang quan tâm đến sản phẩm nào của chúng tôi không ạ?' };
+                // let hi = { role: "assistant", content: 'Xin chào, tôi là nhân viên hỗ trợ bán hàng của Gear VN. Bạn có thể cho tôi biết bạn đang quan tâm đến sản phẩm nào của chúng tôi không ạ?' };
+                let hi = { role: "assistant", content: 'Xin chào, tôi là chuyên viên hỗ trợ giải đáp thắc mắc và tư vấn quỹ đầu tư của Vinacapital. Bạn có thể cho tôi biết bạn đang thắc mắc hay quan tâm đến vấn đề gì không ạ?' };
+                
                 this.chats.push(hi);
 
                 this.updateChatText(chatbox)
